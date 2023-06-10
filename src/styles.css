@@ -1,0 +1,9 @@
+* {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20;
+  margin: 20;
+  justify-content: center;
+}
