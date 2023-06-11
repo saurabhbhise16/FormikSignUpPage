@@ -1,7 +1,11 @@
 form {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  right: 40%;
-  margin: -25px 0 0 -25px;
+  margin-top: 10%;
+  margin-left: 45%;
+  justify-content: center;
+
+  width: 12em;
+  padding: 1em;
+  background-image: linear-gradient(to right, #385887, #0084b6);
+  color: aliceblue;
+  border-color: white;
 }
