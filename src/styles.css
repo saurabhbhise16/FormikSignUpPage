@@ -1,9 +1,50 @@
-* {
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 20;
-  margin: 20;
+form {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10%;
+  margin-left: 45%;
   justify-content: center;
+
+  /* width: 12em; */
+  width: 40%;
+  padding: 1em;
+  background-image: linear-gradient(to right, #385887, #0084b6);
+  color: aliceblue;
+  border-color: white;
+  border-radius: 14px;
+}
+
+input {
+  background-color: aliceblue;
+  border-radius: 415px;
+  /* border: solid; */
+  border: none;
+  margin-bottom: 0.8em;
+  width: 80%;
+}
+
+.submit {
+  margin-top: -40%;
+  border: none;
+  background-image: linear-gradient(to right, #385887, #0084b6);
+  color: white;
+  border-radius: 14px;
+}
+
+.error {
+  padding: 4px;
+  text-align: center;
+  color: white;
+  font-size: smaller;
+  margin-right: 50%;
+  margin-top: 2%;
+  background-color: red;
+  border-radius: 12px;
+  border: none;
+}
+
+.label {
+  margin-left: 14px;
+}
+
+checkedSquare {
 }
