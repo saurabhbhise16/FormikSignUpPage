@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Field, Form, ErrorMessage, useField } from "formik";
+import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 
 const MyTextInput = ({ label, ...props }) => {
@@ -8,7 +8,9 @@ const MyTextInput = ({ label, ...props }) => {
     <>
       <label htmlFor={props.label || props.name}>{label}</label>
       <input className="text-input" {...field} {...props} />
-      {meta.touched || meta.error ? <div>{meta.error}</div> : null};
+      {meta.touched || meta.error ? (
+        <div className="error">{meta.error}</div>
+      ) : null}
     </>
   );
 };
@@ -20,9 +22,14 @@ const MyCheckbox = ({ children, ...props }) => {
   // in `field` alongside `name`, `value`, `onChange`, and `onBlur`
   const [field, meta] = useField({ ...props, type: "checkbox" });
   return (
-    <div>
+    <div className="check">
       <label className="checkbox-input">
-        <input type="checkbox" {...field} {...props} />
+        <input
+          className="checkedSquare"
+          type="checkbox"
+          {...field}
+          {...props}
+        />
         {children}
       </label>
       {meta.touched && meta.error ? (
@@ -67,14 +74,14 @@ const SignupForm = () => {
     >
       <Form>
         <MyTextInput
-          label="firstName"
+          label="FirstName"
           name="firstName"
           type="text"
           placeholder="jane"
         />
 
         <MyTextInput
-          label="lastName"
+          label="LastName"
           name="lastName"
           type="text"
           placeholder="murthy"
